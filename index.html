@@ -1,41 +1,37 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+  <script src="js/index.js" defer></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/frontend.css">
+  <title>Filialen</title>
 </head>
-
 <body>
+<h1>Filialen</h1>
+<ul id="filialen">
+</ul>
+<h1>Detail</h1>
+<dl>
+  <dt>Nummer</dt>
+  <dd id="id"></dd>
+  <dt>Naam</dt>
+  <dd id="naam"></dd>
+  <dt>Gemeente</dt>
+  <dd id="gemeente"></dd>
+  <dt>Omzet</dt>
+  <dd id="omzet"></dd>
+</dl>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<h1>Nieuw filiaal:</h1>
+<input id="nieuweNaam" required autofocus placeholder="Naam">
+<span id="nieuweNaamFout" hidden class="fout">Verplicht.</span>
+<input id="nieuweGemeente" required placeholder="Gemeente">
+<span id="nieuweGemeenteFout" hidden class="fout">Verplicht.</span>
+<input id="nieuweOmzet" required type="number" min="1" placeholder="Omzet">
+<span id="nieuweOmzetFout" hidden class="fout">Verplicht.</span>
+<button id="toevoegen">Toevoegen</button>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<div id="technischeFout" hidden class="fout">
+  Technische fout, contacteer helpdesk</div>
 </body>
-
 </html>
